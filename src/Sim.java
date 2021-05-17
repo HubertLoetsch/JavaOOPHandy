@@ -1,11 +1,15 @@
 public class Sim {
 
     private int id;
-    private String Number;
+    public String Number;
 
     public Sim (int id, String number){
         this.id = id;
         this.Number = number;
+    }
+
+    public String docall(String number){
+        return "Tel" + number + "id" + id;
     }
 
     public int getId() {

@@ -5,15 +5,21 @@ public class Photofile {
     private String extension;
 
 
-    public Photofile (int size,String name, String extension){
+
+    public Photofile (int size, String name, String extension){
         this.size = size;
         this.name = name;
         this.extension = extension;
+
     }
 
     //Kombi aus SIZE/NAME/PNG
-    public void getinfo() {
-        System.out.println();
+    public String getinfo() {
+        return "name: " + name + " size:" +size;
+    }
+
+    public void getAllFiles(){
+
     }
 
     public int getSize() {

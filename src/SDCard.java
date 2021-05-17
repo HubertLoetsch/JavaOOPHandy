@@ -1,3 +1,4 @@
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,24 +7,31 @@ public class SDCard {
     private int capacity;
     private List<Photofile> files;
 
-    public SDCard (int capacity){
+    public SDCard(int capacity) {
         this.capacity = capacity;
         this.files = new ArrayList<>();
     }
 
-    public int getFreeSpace(){
+    public int getFreeSpace() {
         int sum = 0;
-        for (Photofile photofile : files){
+        for (Photofile photofile : files) {
             sum += photofile.getSize();
         }
         return capacity - sum;
     }
 
-    public void SaveFile (Photofile file){
+    public void SaveFile(Files file) {
         this.files.add(file);
     }
 
+    public void deleteFile(){
+
+    }
+
+
 }
+
+
 
 
 
